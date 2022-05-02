@@ -22,7 +22,7 @@ class Login {
     this.user = await LoginModel.findOne({ email: this.body.email })
 
     if (!this.user) {
-      this.errors.push('Usuário ou senha inexistentes.');
+      this.errors.push('Usuário ou senha inválidos.');
       return;
     }
 
